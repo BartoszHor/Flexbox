@@ -4,18 +4,54 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Flexbox and Grid</title>
+  <title>Flexbox</title>
   <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@300&display=swap" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="container">
-    <div class="logo">logotyp</div>
-    <div class="search">wyszukiwarka</div>
-    <div class="settings">ustawienia</div>
-    <nav class="menu">menu nawigacyjne</nav>
-    <section class="main-articles">artykuły</section>
+    <div class="logo">
+      <img class="logo__image" src="images/apple.png">
+    </div>
+    <div class="search">
+      <input type="text" class="search__input" placeholder="Find Your Apple Product">
+      <button class="search__btn">Search</button>
+    </div>
+    <div class="settings">
+      <a href="#" class="settings__icon-link"><i class="fas fa-users-cog settings__logo"></i></a>
+    </div>
+    <nav class="menu">
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a href="#" class="menu__link">HOME</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">PRODUCTS</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">FEATURE</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">GO</a>
+        </li>
+      </ul>
+    </nav>
+    <section class="main-articles">
+      <h1 class="main-articles__intro"> APPLE TECH NEWS </h1>
+      <article class="main-articles__wrapper">
+        <img class="main-articles__image" src="images/photo1.jpeg">
+        <h1 class="main-articles__title"> Guess what's our bestseller </h1>
+        <p class="main-articles__content">Vestibulum purus nisi, auctor at nibh in, accumsan sodales enim. Nunc facilisis ultricies erat, ultrices fermentum ligula. Fusce nibh est, commodo vel nisi at, eleifend placerat purus.   </p>
+        <button class="main-articles__read-more">Read more</button>
+      </article>
+      <article class="main-articles__wrapper">
+        <img class="main-articles__image" src="images/iphon2.jpg">
+        <h1 class="main-articles__title"> See what's new </h1>
+        <p class="main-articles__content">Nulla dapibus, urna nec auctor consectetur, mauris justo accumsan tellus, sit amet aliquet neque arcu nec est. Fusce nibh est, commodo vel nisi at </p>
+        <button class="main-articles__read-more">Read more</button>
+      </article>
+    </section>
     <section class="article-list">lista artykułów</section>
     <footer class="footer">kontakt</footer>
 
