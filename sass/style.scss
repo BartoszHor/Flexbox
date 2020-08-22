@@ -34,9 +34,9 @@ body {
   flex-direction: row;
   align-content: flex-start;
   max-width: 1100px;
+  max-height: 2000px;
   margin: 0 auto;
   padding: 20px;
-  box-shadow: 2px 2px 4px #000000;
   font-size: 1.1rem;
 }
 
@@ -117,6 +117,8 @@ body {
   flex-basis: 100%;
   background-color: $color-dark;
   font-family: $font-main;
+  box-shadow: 1px 1px 2px 4px silver;
+  margin: 0 0 80px 0;
   &__list {
     display: flex;
     justify-content: space-around;
@@ -130,6 +132,10 @@ body {
       transition-duration: 1s;
       transition-property: border-bottom;
       position: relative;
+      &:hover:after {
+        left: 0%;
+        width: 100%;
+      }
       &::after {
         content: '';
         width: 0;
@@ -177,10 +183,7 @@ body {
   }
 }
 
-.menu__list li:hover:after {
-  left: 0%;
-  width: 100%;
-}
+
 
 /* third section */
 
@@ -190,6 +193,8 @@ body {
   align-content: center;
   justify-content: space-around;
   margin: 0 0 40px 0;
+  box-shadow: 1px 1px 3px 4px silver;
+  padding: 20px 0 20px 0;
 
   &__intro {
     flex-basis: 100%;
@@ -205,6 +210,7 @@ body {
 
   &__content {
     font-family: $font-text;
+    text-align: justify;
   }
 
   &__wrapper {
@@ -238,16 +244,55 @@ body {
 /* fourth section */
 
 .article-list {
-  flex-basis: 100%;
-  background-color: grey;
-  opacity: 0.5;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 30px 0;
+  margin: 30px 0 0 0;
+  box-shadow: 1px 1px 3px 4px silver;
+  &__wrapper {
+    flex-basis: 25%;
+    text-align: center;
+
+  }
+  &__title {
+      background-color: rgba(169, 169, 169, 0.5);
+      padding: 20px 0;
+      margin: 0 0 40px 0;
+      transform: translateY(-3px);
+      box-shadow: 1px 1px 3px 4px silver;
+      font-size: 14px;
+    }
 }
 
 /*footer*/
 
-.footer {
-  flex-basis: 100%;
-}
+footer {
+  width: 100%;
+  padding: 20px 0 0 0;
+  .media {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    li {
+      margin: 0 24px 0 0;
+      font-size: 0;
+      i {
+        font-size: 24px;
+        color: white;
+        background-color: black;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        line-height: 30px;
+        transition: all 1s;
+        &:hover {
+          transform: rotate(360deg);
 
+        }
+      }
+    }
+  }
+}
 
 

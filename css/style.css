@@ -21,9 +21,9 @@ body {
   -ms-flex-line-pack: start;
       align-content: flex-start;
   max-width: 1100px;
+  max-height: 2000px;
   margin: 0 auto;
   padding: 20px;
-  box-shadow: 2px 2px 4px #000000;
   font-size: 1.1rem;
 }
 
@@ -121,6 +121,8 @@ body {
       flex-basis: 100%;
   background-color: #333;
   font-family: "Lato", sans-serif;
+  box-shadow: 1px 1px 2px 4px silver;
+  margin: 0 0 80px 0;
 }
 
 .menu__list {
@@ -142,6 +144,11 @@ body {
   transition-duration: 1s;
   transition-property: border-bottom;
   position: relative;
+}
+
+.menu__list li:hover:after {
+  left: 0%;
+  width: 100%;
 }
 
 .menu__list li::after {
@@ -198,11 +205,6 @@ body {
   border-color: silver;
 }
 
-.menu__list li:hover:after {
-  left: 0%;
-  width: 100%;
-}
-
 /* third section */
 .main-articles {
   display: -ms-flexbox;
@@ -214,6 +216,8 @@ body {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   margin: 0 0 40px 0;
+  box-shadow: 1px 1px 3px 4px silver;
+  padding: 20px 0 20px 0;
 }
 
 .main-articles__intro {
@@ -231,6 +235,7 @@ body {
 
 .main-articles__content {
   font-family: "Roboto", sans-serif;
+  text-align: justify;
 }
 
 .main-articles__wrapper {
@@ -264,15 +269,63 @@ body {
 
 /* fourth section */
 .article-list {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  background-color: grey;
-  opacity: 0.5;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 30px 0;
+  margin: 30px 0 0 0;
+  box-shadow: 1px 1px 3px 4px silver;
+}
+
+.article-list__wrapper {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  text-align: center;
+}
+
+.article-list__title {
+  background-color: rgba(169, 169, 169, 0.5);
+  padding: 20px 0;
+  margin: 0 0 40px 0;
+  transform: translateY(-3px);
+  box-shadow: 1px 1px 3px 4px silver;
+  font-size: 14px;
 }
 
 /*footer*/
-.footer {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
+footer {
+  width: 100%;
+  padding: 20px 0 0 0;
+}
+
+footer .media {
+  text-align: center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+footer .media li {
+  margin: 0 24px 0 0;
+  font-size: 0;
+}
+
+footer .media li i {
+  font-size: 24px;
+  color: white;
+  background-color: black;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  line-height: 30px;
+  transition: all 1s;
+}
+
+footer .media li i:hover {
+  transform: rotate(360deg);
 }
 /*# sourceMappingURL=style.css.map */
